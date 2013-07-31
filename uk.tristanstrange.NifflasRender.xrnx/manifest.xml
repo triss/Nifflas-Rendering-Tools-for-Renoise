@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RenoiseScriptingTool doc_version="0">
+  <Name>Nifflas Render</Name>
+  <Id>uk.tristanstrange.NifflasRender</Id>
+  <Version>1</Version>
+  <ApiVersion>3</ApiVersion>
+  <Author>Tristan Strange | tristan.strange@gmail.com</Author>
+  <AutoUpgraded>false</AutoUpgraded>
+  <Category>Rendering tools</Category>
+  <Description>Renders the song, labelled patterns or ungrouped tracks as samples.
+
+All produced samples are 16bit 44100Hz. 
+
+A 10 sample allways applied to either end of the sample when creating loops.
+
+All renders produced by this tool are saved in the same location as source .XRNS song.
+
+All features silently overwrite the output form previos runs.
+
+Error's or warning message's are only produced when a requested action can not be carried out or if clipping occurs when constructing a loop. Otherwise all status updates are sent to Renoise's status bar.
+
+The tools features can be accessed via the following menu options:
+
+Tools -> Nifflas Render -> Song...
+
+Renders the song without modifying it. 
+The outputted sample is saved as a .WAV with the same name as the .XRNS file.
+
+Tools -> Nifflas Render -> Song as loop...
+
+Renders the song as a loop. The last pattern of the song is cutoff and mixed with the first. 
+The outputted sample is saved as a .WAV with the same name as the .XRNS file.
+
+Tools -> Nifflas Render -> Labelled patterns...
+
+Renders each pattern that has a name in the song sequencer to a .WAV file with that name.
+
+Tools -> Nifflas Render -> Labelled pattern pairs as loops...
+
+Renders each pair of patterns that has a name in the song sequencer to a sample and then creates a loop by taking the content of the 2nd pattern and merging it with the start of the first.
+Samples are saved as .WAV files with that same name as the pattern pair.
+
+Tools -> Nifflas Render -> Ungrouped tracks...
+
+Renders each ungrouped track as a .WAV file as the same name as that track.
+
+Tools -> Nifflas Render -> Ungrouped tracks...
+
+Renders each ungrouped track as a .WAV file as the same name as that track and cuts off the last pattern of the tracks to create a loop by mixing it with the first.
+
+</Description>
+  <Homepage></Homepage>
+  <Platform/>
+  <Icon/>
+</RenoiseScriptingTool>
