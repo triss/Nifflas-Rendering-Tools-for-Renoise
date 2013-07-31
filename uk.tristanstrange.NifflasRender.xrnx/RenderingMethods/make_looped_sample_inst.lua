@@ -5,7 +5,7 @@
 -- Returns an instrument containing a looped version of the sample
 -- - sample_path - file name of sample to load
 -- - tail_len - length of samples tail in frames
-local function make_looped_sample_inst(sample_path, tail_len)
+function make_looped_sample_inst(sample_path, tail_len)
 	local rs = renoise.song()
 
 	-- Create an instrument to perform work in

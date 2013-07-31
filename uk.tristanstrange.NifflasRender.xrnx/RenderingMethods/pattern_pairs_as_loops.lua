@@ -1,6 +1,6 @@
 -- Render each consecutive pair of patterns as loop and save as a sample with
 -- the name of the first pattern
-local function render_pattern_pairs_as_loop()
+function render_pattern_pairs_as_loop()
 	local rs = renoise.song()
 	
 	-- show an error and return if this XRNS has not been saved anywhere yet

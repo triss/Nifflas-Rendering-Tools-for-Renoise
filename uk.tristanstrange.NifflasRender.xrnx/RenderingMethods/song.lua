@@ -1,5 +1,5 @@
 -- Renders the song and saves it as a .wav file with the same name as the .xrns
-local function render_song()
+function render_song()
 	local rs = renoise.song()
 
 	-- confirm that this XRNS has been saved somewhere, if not show an error

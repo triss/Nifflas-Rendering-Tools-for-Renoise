@@ -3,7 +3,7 @@
 --------------------------------------------------------------------------------
 
 -- Returns a patterns estimated length in frames
-local function pattern_length_in_frames(pattern)
+function pattern_length_in_frames(pattern)
 	-- TODO should I be searching back through track for last BPM/LPB commands?
 
 	local transport = renoise.song().transport
@@ -17,7 +17,7 @@ end
 
 -- Returns the path that the currently loaded song is located within including 
 -- trailing slash, it assumes the song filename ends with .XRNS
-local function get_song_location()
+function get_song_location()
 	local rs = renoise.song()
 
 	local search_pattern
@@ -35,7 +35,7 @@ end
 
 -- Returns the the file name of the current song excluding it's path and  
 -- extension
-local function get_song_file_name()
+function get_song_file_name()
 	local rs = renoise.song()
 
 	local search_pattern
@@ -53,7 +53,7 @@ local function get_song_file_name()
 end
 
 -- Returns the maximum absolute value in a table
-local function abs_max_of_table(t)
+function abs_max_of_table(t)
 	local abs_max = 0
 
 	for i = 1, #t do
@@ -68,7 +68,7 @@ local function abs_max_of_table(t)
 end
 
 -- Returns sequencer track mute states
-local function get_sequencer_track_solo_states()
+function get_sequencer_track_solo_states()
 	local rs = renoise.song()
 	
 	local solo_states = {}
@@ -81,7 +81,7 @@ local function get_sequencer_track_solo_states()
 end
 
 -- Set sequencer track solo states
-local function set_sequencer_track_solo_states(solo_states)
+function set_sequencer_track_solo_states(solo_states)
 	local rs = renoise.song()
 
 	for i = 1, rs.sequencer_track_count do
@@ -90,7 +90,7 @@ local function set_sequencer_track_solo_states(solo_states)
 end
 
 -- Make's sure only one top level track is solo'd
-local function set_one_track_solo(track_i)
+function set_one_track_solo(track_i)
 	local rs = renoise.song()
 
 	for i = 1, rs.sequencer_track_count do

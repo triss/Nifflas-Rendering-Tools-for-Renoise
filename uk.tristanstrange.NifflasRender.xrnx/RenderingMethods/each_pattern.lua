@@ -1,5 +1,5 @@
 -- Render every named pattern as a sample with the same name as the pattern
-local function render_each_pattern()
+function render_each_pattern()
 	local rs = renoise.song()
 	
 	-- confirm that this XRNS has been saved somewhere, if not show an error

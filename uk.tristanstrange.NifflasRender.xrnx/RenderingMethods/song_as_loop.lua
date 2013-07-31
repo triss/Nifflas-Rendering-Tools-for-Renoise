@@ -1,6 +1,6 @@
 -- Renders the song as a loop and outputs file with the same name as and in the
 -- same folder as the song's XRNS file
-local function render_song_as_loop()
+function render_song_as_loop()
 	local rs = renoise.song()
 
 	-- confirm that this XRNS has been saved somewhere, if not show an error

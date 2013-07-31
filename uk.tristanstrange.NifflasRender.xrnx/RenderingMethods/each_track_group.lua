@@ -1,5 +1,5 @@
 -- Render  every track not in a group as a separate sample
-local function render_each_track_group()
+function render_each_track_group()
 	local rs = renoise.song()
 
 	-- confirm that this XRNS has been saved somewhere, if not show an error

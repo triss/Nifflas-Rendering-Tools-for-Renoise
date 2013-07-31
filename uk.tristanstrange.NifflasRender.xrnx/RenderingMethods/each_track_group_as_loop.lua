@@ -1,5 +1,5 @@
 -- Render tracks/groups as a loop using last pattern as loop decay
-local function render_each_track_group_as_loop ()
+function render_each_track_group_as_loop ()
 	local rs = renoise.song()
 	
 	-- confirm that this XRNS has been saved somewhere, if not show an error
