@@ -25,6 +25,7 @@ function show_choose_rendering_method_dialog()
 			text = "Ok", width = 200,
 			notifier = function()
 				perform_rendering_method(vb.views.rendering_mode.value)	
+				rendering_method_dialog:close()
 			end
 		}
 	}

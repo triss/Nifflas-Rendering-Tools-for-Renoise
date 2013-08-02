@@ -28,7 +28,8 @@ function render_each_track_group()
 
 			enqueue_render_track(i, render_options, render_path, function() 
 				renoise.app():show_status(
-					"Finished rendering track " .. rs:track(i).name ..  " to " .. save_path
+					"Finished rendering track " .. rs:track(i).name ..  
+					" to " .. render_path
 				)
 			end)
 		end

@@ -31,7 +31,7 @@ function perform_rendering_method(render_mode)
 	local render_methods = { 
 		render_song, render_song_as_loop, render_each_pattern,
 		render_pattern_pairs_as_loop, render_each_track_group,
-		render_pattern_pairs_as_loop
+		render_each_track_group_as_loop
 	}
 
 	song_render_mode = render_mode
@@ -41,6 +41,7 @@ function perform_rendering_method(render_mode)
 	render_methods[song_render_mode]()
 end
 
+-- perform this songs defauylt render
 function perform_default_render()
 	if song_render_mode then
 		perform_rendering_method(song_render_mode)
@@ -56,4 +57,9 @@ end
 renoise.tool():add_menu_entry {
 	name = "Main Menu:Tools:Nifflas Render...",
 	invoke = perform_default_render
+}
+
+renoise.tool():add_menu_entry {
+	name = "Main Menu:Tools:Choose Nifflas Render mode...",
+	invoke = show_choose_rendering_method_dialog
 }
