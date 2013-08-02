@@ -40,7 +40,7 @@ function get_song_file_name()
 
 	local search_pattern
 
-	if os.platform == "WINDOWS" then
+	if os.platform() == "WINDOWS" then
 		search_pattern = "\\[^\\]*%.xrns" -- not tested!!!
 	else
 		search_pattern = "/[^/]*%.xrns"
