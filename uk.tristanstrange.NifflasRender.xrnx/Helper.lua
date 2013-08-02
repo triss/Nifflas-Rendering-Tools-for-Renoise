@@ -33,7 +33,7 @@ function get_song_location()
 	return string.sub(rs.file_name, 1, song_path_end_i)
 end
 
--- Returns the the file name of the current song excluding it's path and  
+-- Returns the file name of the current song excluding it's path and  
 -- extension
 function get_song_file_name()
 	local rs = renoise.song()
