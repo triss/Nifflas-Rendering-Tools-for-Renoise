@@ -41,11 +41,12 @@ function perform_rendering_method(render_mode)
 	render_methods[song_render_mode]()
 end
 
--- perform this songs defauylt render
+-- perform this songs default render
 function perform_default_render()
 	if song_render_mode then
 		perform_rendering_method(song_render_mode)
 	else
+		create_render_settings()
 		show_choose_rendering_method_dialog()
 	end
 end

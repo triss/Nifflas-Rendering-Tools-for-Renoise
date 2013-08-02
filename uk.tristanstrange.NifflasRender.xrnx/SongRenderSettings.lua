@@ -8,17 +8,25 @@ function get_render_settings_sample()
 		end
 	end
 
-	local index = #renoise.song ().instruments + 1
+	return nil
+end
+
+function create_render_settings()
+	local index = #renoise.song().instruments + 1
 	renoise.song():insert_instrument_at (index)
-	local instrument = renoise.song().instruments[index]
+	local instrument = renoise.song():instrument(index)
 	instrument.name = RENDER_SETTINGS_INST_NAME
 
-	return instrument.samples[1]
+	return instrument:sample(1)
 end
 
 -- recover rendering settings from sample slot
-function recover_render_settings()
-	song_render_mode = tonumber(get_render_settings_sample().name)
+function recover_render_settings()	
+	local recoverd_settings = get_render_settings_sample().name
+
+	if recoverd_settings then
+		song_render_mode = recoverd_settings
+	end
 end
 
 -- store rendering settings in sample slot
