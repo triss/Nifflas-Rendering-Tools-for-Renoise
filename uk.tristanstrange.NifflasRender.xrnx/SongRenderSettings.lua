@@ -25,7 +25,7 @@ function recover_render_settings()
 	local recoverd_settings = get_render_settings_sample().name
 
 	if recoverd_settings then
-		song_render_mode = recoverd_settings
+		song_render_mode = tostring(recoverd_settings)
 	end
 end
 
